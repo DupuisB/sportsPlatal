@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Map Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Sports<span>Map</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Map</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <div class="filter-panel">
+                    <h2>Filter Sports</h2>
+                    <div class="sports-filters">
+                        <div class="filter-item">
+                            <input type="checkbox" id="football" checked>
+                            <label for="football">Football</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="basketball" checked>
+                            <label for="basketball">Basketball</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="tennis" checked>
+                            <label for="tennis">Tennis</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="swimming" checked>
+                            <label for="swimming">Swimming</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="golf" checked>
+                            <label for="golf">Golf</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="running" checked>
+                            <label for="running">Running</label>
+                        </div>
+                    </div>
+                    <button id="reset-filters" class="btn">Reset Filters</button>
+                </div>
+                
+                <div class="visualization-panel">
+                    <h2>Visualization</h2>
+                    <div class="visualization-options">
+                        <div class="viz-option">
+                            <h3>Running</h3>
+                            <div class="viz-toggle">
+                                <input type="radio" id="running-markers" name="running-viz" value="markers" checked>
+                                <label for="running-markers">Markers</label>
+                                <input type="radio" id="running-heatmap" name="running-viz" value="heatmap">
+                                <label for="running-heatmap">Heatmap</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-panel">
+                    <h2>Location Details</h2>
+                    <div id="location-details">
+                        <p class="no-selection">Select a location on the map to see details</p>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SportsMap Explorer | Télécom Project</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
